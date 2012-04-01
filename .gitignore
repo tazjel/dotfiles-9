@@ -1,0 +1,8 @@
+aptitude/cache
+vim/.netrwhist
+vim/spell/*.add
+vim/spell/*.add.spl
+xmonad/xmonad.errors
+xmonad/xmonad.hi
+xmonad/xmonad.o
+xmonad/xmonad-x86_64-linux

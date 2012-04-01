@@ -1,0 +1,14 @@
+[user]
+	email = sergey.lungu@gmail.com
+	name = Sergey Lungu
+[sendemail]
+	cc = sebl
+	from = sebl
+	confirm = auto
+	multiedit = false
+	chainreplyto = false
+	signedoffbycc = true
+	aliasesfile = /home/sebl/.aliases
+	aliasfiletype = mutt
+[format]
+	signoff = true

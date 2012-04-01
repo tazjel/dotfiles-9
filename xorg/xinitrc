@@ -1,0 +1,13 @@
+#!/bin/sh
+
+xrandr -s 0
+
+xsetroot -solid '#4c4d4e'
+xsetroot -cursor_name left_ptr
+
+xrdb ~/.Xresources
+
+hsetroot -center ~/.wallpaper
+
+urxvtd -q -o >/dev/null 2>&1 &
+dbus-launch --exit-with-session xmonad >/dev/null 2>&1

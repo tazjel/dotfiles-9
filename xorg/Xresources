@@ -1,0 +1,31 @@
+Xft.dpi:				96
+Xft.antialias:				true
+Xft.hinting:				true
+Xft.hintstyle:				hintfull
+Xft.rgba:				rgb
+
+URxvt*termName:				rxvt-unicode
+URxvt*saveLines:			512
+URxvt*scrollBar:			False
+URxvt*font:				-misc-fixed-medium-r-normal--14-130-75-75-c-70-*-*
+
+URxvt*cursorColor:			#ecedee
+URxvt*pointerColor:			#ecedee
+URxvt*background:			#3c3d3e
+URxvt*foreground:			#ecedee
+URxvt*color0:				#3c3d3e
+URxvt*color8:				#3c3d3e
+URxvt*color1:				#ffa0a0
+URxvt*color9:				#ffa0a0
+URxvt*color2:				#98fb98
+URxvt*color10:				#9acd32
+URxvt*color3:				#f0e68c
+URxvt*color11:				#f0e68c
+URxvt*color4:				#87ceeb
+URxvt*color12:				#87ceeb
+URxvt*color5:				#ffa0a0
+URxvt*color13:				#ffa0a0
+URxvt*color6:				#87ceeb
+URxvt*color14:				#87ceeb
+URxvt*color7:				#ecedee
+URxvt*color15:				#ecedee

@@ -1,0 +1,66 @@
+syntax on
+colorscheme desert256
+filetype plugin indent on
+
+set autoindent
+set background=dark
+set backspace=indent,eol,start
+set cindent
+set cinoptions=:0,l1,g0,p4,t0,i4,+4,c1,(0,W4
+set clipboard^=unnamed
+set formatoptions+=tqcro
+set hidden
+set ignorecase
+set incsearch
+set lazyredraw
+set modeline
+set mouse=a
+set nobackup
+set nocompatible
+set noerrorbells
+set noexpandtab
+set nohlsearch
+set noshowmatch
+set novisualbell
+set nowrap
+set pastetoggle=<f12>
+set ruler
+set scrolloff=3
+set showcmd
+set showmode
+set smartcase
+set smartindent
+set smarttab
+set spelllang=en,ru
+set t_vb=
+set textwidth=78
+set ttyfast
+
+map  <silent> <F11> :set spell!<CR>
+map! <silent> <F11> <ESC>:set spell!<CR>i
+
+nmap <silent> <C-D> :NERDTreeToggle \| :silent NERDTreeMirror<CR>
+map! <silent> <C-D> <ESC>:NERDTreeToggle \| :silent NERDTreeMirror<CR>
+
+au BufNewFile,BufRead ~/devel/kl/* setlocal cinoptions=:0,l1,g0,p8,t0,i8,+8,c1,(0,W8
+au BufNewFile,BufRead ~/devel/kl/* setlocal expandtab
+au BufNewFile,BufRead ~/devel/kl/* setlocal tabstop=4
+au BufNewFile,BufRead ~/devel/kl/* setlocal shiftwidth=4
+au BufNewFile,BufRead ~/devel/kl/* setlocal softtabstop=4
+
+au BufNewFile,BufRead *.xml,*.html,*.js,*.css,*.sass setlocal expandtab
+au BufNewFile,BufRead *.xml,*.html,*.js,*.css,*.sass setlocal tabstop=2
+au BufNewFile,BufRead *.xml,*.html,*.js,*.css,*.sass setlocal shiftwidth=2
+au BufNewFile,BufRead *.xml,*.html,*.js,*.css,*.sass setlocal softtabstop=2
+au BufNewFile,BufRead *.xml,*.html,*.js,*.css,*.sass setlocal textwidth=500
+
+au BufNewFile,BufRead *.hs,*.cabal,*.py,*.sql setlocal expandtab
+au BufNewFile,BufRead *.hs,*.cabal,*.py,*.sql setlocal tabstop=4
+au BufNewFile,BufRead *.hs,*.cabal,*.py,*.sql setlocal shiftwidth=4
+au BufNewFile,BufRead *.hs,*.cabal,*.py,*.sql setlocal softtabstop=4
+
+au BufNewFile,BufRead /tmp/mutt* setlocal spell
+au BufNewFile,BufRead /tmp/mutt* source ~/.vim/scripts/mutt.vim
+
+au BufNewFile,BufRead COMMIT_EDITMSG setlocal filetype=conf
+au BufNewFile,BufRead COMMIT_EDITMSG setlocal spell

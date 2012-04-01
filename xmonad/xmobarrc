@@ -1,0 +1,13 @@
+Config
+    { font = "-misc-fixed-medium-r-normal--14-130-75-75-c-70-*-*"
+    , bgColor = "#6c6d6e"
+    , fgColor = "#acadae"
+    , position = TopW L 100
+    , commands = [ Run Date "%a %Y/%m/%d <fc=#dcddde>%H:%M</fc>" "date" 10
+                 , Run Mail [("M", "~/mail")] "mail"
+                 , Run StdinReader
+                 ]
+    , sepChar = "%"
+    , alignSep = "}{"
+    , template = " %StdinReader%}{<fc=#dcddde>%mail%</fc> :: %date% "
+    }

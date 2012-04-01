@@ -1,0 +1,14 @@
+Aptitude "";
+Aptitude::CmdLine "";
+Aptitude::CmdLine::Always-Prompt "true";
+Aptitude::CmdLine::Show-Versions "true";
+Aptitude::CmdLine::Show-Deps "true";
+Aptitude::CmdLine::Show-Size-Changes "true";
+Aptitude::CmdLine::Package-Display-Format "%c%a%M %p# %v# %V# - %d#";
+Aptitude::Delete-Unused "true";
+Aptitude::Purge-Unused "true";
+Aptitude::Recommends-Important "false";
+Aptitude::Suggests-Important "false";
+Aptitude::Keep-Recommends "false";
+Aptitude::Keep-Suggests "false";
+Aptitude::Ignore-Recommends-Important "true";

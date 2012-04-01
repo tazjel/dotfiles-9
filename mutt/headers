@@ -1,0 +1,5 @@
+ignore *
+unignore Date To Cc From Reply-To X-Mailer User-Agent Organization Subject
+
+unhdr_order *
+hdr_order Date To Cc From Reply-To X-Mailer User-Agent Organization Subject

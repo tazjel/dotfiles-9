@@ -10,4 +10,5 @@ xrdb ~/.Xresources
 hsetroot -center ~/.wallpaper
 
 urxvtd -q -o >/dev/null 2>&1 &
+[ -x /usr/bin/xscreensaver ] && xscreensaver >/dev/null 2>&1 &
 dbus-launch --exit-with-session xmonad >/dev/null 2>&1

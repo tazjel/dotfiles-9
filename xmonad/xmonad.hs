@@ -67,7 +67,8 @@ main = do
                 _ -> l)
             }
         } `additionalKeys`
-        [  ((0, xK_Print), spawn "scrot ~/tmp/%Y%m%d-%H%M%S.png")
+        [ ((defaultModMask .|. shiftMask, xK_l), spawn "xscreensaver-command -lock")
+        , ((0, xK_Print), spawn "scrot ~/tmp/%Y%m%d-%H%M%S.png")
         , ((defaultModMask, xK_Print), spawn "scrot -u ~/tmp/%Y%m%d-%H%M%S.png")
         , ((defaultModMask, xK_p), spawn "exe=`dmenu_path | dmenu -nf '#acadae' -nb '#6c6d6e' -sf '#6c6d6e' -sb '#acadae' -fn -misc-fixed-medium-r-normal--14-130-75-75-c-70-*-*` && eval \"exec $exe\"")
         ]

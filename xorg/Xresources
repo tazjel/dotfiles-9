@@ -29,3 +29,39 @@ URxvt*color6:				#87ceeb
 URxvt*color14:				#87ceeb
 URxvt*color7:				#ecedee
 URxvt*color15:				#ecedee
+
+XScreenSaver*Dialog.headingFont:	-misc-fixed-bold-r-normal--14-130-75-75-c-70-*-*
+XScreenSaver*Dialog.bodyFont:		-misc-fixed-medium-r-normal--14-130-75-75-c-70-*-*
+XScreenSaver*Dialog.labelFont:		-misc-fixed-medium-r-normal--14-130-75-75-c-70-*-*
+XScreenSaver*Dialog.unameFont:		-misc-fixed-medium-r-normal--14-130-75-75-c-70-*-*
+XScreenSaver*Dialog.buttonFont:		-misc-fixed-medium-r-normal--14-130-75-75-c-70-*-*
+XScreenSaver*Dialog.dateFont:		-misc-fixed-medium-r-normal--10-100-75-75-c-60-*-*
+XScreenSaver*passwd.passwdFont:		-misc-fixed-medium-r-normal--14-130-75-75-c-70-*-*
+
+XScreenSaver*Dialog.foreground:		#000000
+XScreenSaver*Dialog.background:		#ecedee
+XScreenSaver*Dialog.Button.foreground:	#000000
+XScreenSaver*Dialog.Button.background:	#ecedee
+XScreenSaver*Dialog.Button.pointBackground:#eaeaea
+xScreenSaver*Dialog.Button.clickBackground:#c3c3c3
+xScreenSaver*Dialog.text.foreground:	#000000
+XScreenSaver*Dialog.text.background:	#ffffff
+xScreenSaver*passwd.thermometer.foreground:#4464ac
+XScreenSaver*passwd.thermometer.background:#ffffff
+xScreenSaver*Dialog.topShadowColor:	#ffffff
+xScreenSaver*Dialog.bottomShadowColor:	#3c3d3e
+XScreenSaver*Dialog.logo.width:		210
+XScreenSaver*Dialog.logo.height:	210
+XScreenSaver*Dialog.internalBorderWidth:8
+XScreenSaver*Dialog.borderWidth:	1
+XScreenSaver*Dialog.shadowThickness:	2
+
+XScreenSaver*passwd.heading.label:	Welcome to debian@lungu.avp.ru!
+XScreenSaver*passwd.body.label:		Please enter your password.
+XScreenSaver*passwd.unlock.label:	OK
+XScreenSaver*passwd.login.label:	New Login
+XScreenSaver*passwd.user.label:		Username:
+XScreenSaver*passwd.passwd.label:	Password:
+XScreenSaver*passwd.thermometer.width:	8
+XScreenSaver*passwd.asterisks:		True
+XScreenSaver*passwd.uname:		False

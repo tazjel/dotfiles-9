@@ -21,7 +21,8 @@ set noerrorbells
 set noexpandtab
 set nohlsearch
 set noshowmatch
-set novisualbell
+set noerrorbells
+set visualbell
 set nowrap
 set pastetoggle=<f12>
 set ruler

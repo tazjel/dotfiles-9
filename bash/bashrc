@@ -21,7 +21,9 @@ HISTFILESIZE=2000
 
 shopt -s histappend
 shopt -s checkwinsize
+
 set -o vi
+setterm -blength 0
 
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 

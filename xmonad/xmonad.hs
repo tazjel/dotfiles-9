@@ -9,6 +9,7 @@ import XMonad.Layout.Grid
 import XMonad.Layout.Reflect
 import XMonad.Layout.NoBorders
 import XMonad.Layout.PerWorkspace
+import XMonad.Layout.IndependentScreens
 
 import XMonad.Util.Run
 import XMonad.Util.EZConfig
@@ -24,7 +25,8 @@ main = do
     let gimp = withIM (1/6) ((ClassName "Gimp") `And` (Role "gimp-toolbox")) $ reflectHoriz $
                withIM (1/6) ((ClassName "Gimp") `And` (Role "gimp-dock")) Full
 
-    xmobar <- spawnPipe "xmobar ~/.xmonad/xmobarrc"
+    nScreens <- countScreens
+    xmobars <- mapM (\s -> spawnPipe ("xmobar -x " ++ show s ++ " ~/.xmonad/xmobarrc")) [0..nScreens-1]
     xmonad $ defaultConfig
         { modMask = defaultModMask
         , terminal = "urxvtc"
@@ -51,7 +53,7 @@ main = do
             $ onWorkspace "5" (gimp ||| full ||| vertical ||| horizontal)
             $ layoutHook defaultConfig
         , logHook = dynamicLogWithPP xmobarPP
-            { ppOutput = hPutStrLn xmobar
+            { ppOutput = mapM_ (\(h, s) -> hPutStrLn h s) . zip xmobars . replicate 2
             , ppCurrent = xmobarColor "#dcddde" "" 
             , ppUrgent = xmobarColor "#8c0d0e" ""
             , ppTitle = xmobarColor "#dcddde" "" . shorten 200

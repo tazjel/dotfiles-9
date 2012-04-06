@@ -7,7 +7,7 @@ xsetroot -cursor_name left_ptr
 
 xrdb ~/.Xresources
 
-hsetroot -center ~/.wallpaper
+feh --bg-center ~/.wallpaper
 
 urxvtd -q -o >/dev/null 2>&1 &
 xset b off >/dev/null 2>&1 &

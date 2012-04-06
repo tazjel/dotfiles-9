@@ -5,3 +5,5 @@ source ~/.mutt/bindings
 source ~/.mutt/maildir
 source ~/.mutt/formats
 source ~/.mutt/colors
+
+source ~/.mutt/local

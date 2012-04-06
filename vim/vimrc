@@ -43,12 +43,6 @@ map! <silent> <F11> <ESC>:set spell!<CR>i
 nmap <silent> <C-D> :NERDTreeToggle \| :silent NERDTreeMirror<CR>
 map! <silent> <C-D> <ESC>:NERDTreeToggle \| :silent NERDTreeMirror<CR>
 
-au BufNewFile,BufRead ~/devel/kl/* setlocal cinoptions=:0,l1,g0,p8,t0,i8,+8,c1,(0,W8
-au BufNewFile,BufRead ~/devel/kl/* setlocal expandtab
-au BufNewFile,BufRead ~/devel/kl/* setlocal tabstop=4
-au BufNewFile,BufRead ~/devel/kl/* setlocal shiftwidth=4
-au BufNewFile,BufRead ~/devel/kl/* setlocal softtabstop=4
-
 au BufNewFile,BufRead *.xml,*.html,*.js,*.css,*.sass setlocal expandtab
 au BufNewFile,BufRead *.xml,*.html,*.js,*.css,*.sass setlocal tabstop=2
 au BufNewFile,BufRead *.xml,*.html,*.js,*.css,*.sass setlocal shiftwidth=2
@@ -65,3 +59,5 @@ au BufNewFile,BufRead /tmp/mutt* source ~/.vim/scripts/mutt.vim
 
 au BufNewFile,BufRead COMMIT_EDITMSG setlocal filetype=conf
 au BufNewFile,BufRead COMMIT_EDITMSG setlocal spell
+
+source ~/.vim/local.vim

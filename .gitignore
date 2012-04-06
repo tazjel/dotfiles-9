@@ -1,8 +1,10 @@
 aptitude/cache
+mutt/local
 vim/.netrwhist
+vim/local.vim
 vim/spell/*.add
 vim/spell/*.add.spl
+xmonad/xmonad-x86_64-linux
 xmonad/xmonad.errors
 xmonad/xmonad.hi
 xmonad/xmonad.o
-xmonad/xmonad-x86_64-linux

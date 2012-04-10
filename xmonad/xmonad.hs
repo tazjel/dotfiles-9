@@ -46,6 +46,7 @@ main = do
             , (className =? "Gimp" <&&> (role =? "gimp-toolbox" <||> role =? "gimp-dock" <||> role =? "gimp-image-window")) --> unfloat
             , className =? "VirtualBox" --> doShift "6"
             , className =? "VBoxSDL" --> doShift "6"
+            , className =? "qemu-system-i386" --> doCenterFloat
             ] <+> manageDocks <+> manageHook defaultConfig
         , layoutHook = smartBorders . avoidStruts
             $ onWorkspaces ["1", "2"] (vertical ||| horizontal ||| full)

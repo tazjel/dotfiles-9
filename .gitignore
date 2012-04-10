@@ -1,5 +1,6 @@
 aptitude/cache
 mutt/local
+ncmpcpp/error.log
 vim/.netrwhist
 vim/local.vim
 vim/spell/*.add

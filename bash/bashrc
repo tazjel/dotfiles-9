@@ -9,6 +9,7 @@ export EDITOR=vim
 export VISUAL=$EDITOR
 export PAGER=less
 export BC_ENV_ARGS="-q $HOME/.bcrc"
+export _JAVA_AWT_WM_NONREPARENTING=1
 
 if [ `tty` = "/dev/tty1" ]; then
     startx

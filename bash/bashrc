@@ -11,11 +11,6 @@ export PAGER=less
 export BC_ENV_ARGS="-q $HOME/.bcrc"
 export _JAVA_AWT_WM_NONREPARENTING=1
 
-if [ `tty` = "/dev/tty1" ]; then
-    startx
-    exit
-fi
-
 HISTCONTROL=ignoreboth
 HISTSIZE=1000
 HISTFILESIZE=2000
@@ -55,4 +50,9 @@ fi
 
 if [ -f $HOME/.bashrc.local ]; then
     . $HOME/.bashrc.local
+fi
+
+if [ `tty` = "/dev/tty1" ]; then
+    startx
+    exit
 fi

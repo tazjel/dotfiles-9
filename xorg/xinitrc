@@ -13,4 +13,5 @@ urxvtd -q -o >/dev/null 2>&1 &
 xset b off >/dev/null 2>&1 &
 
 [ -x /usr/bin/xscreensaver ] && xscreensaver >/dev/null 2>&1 &
+trayer --edge top --align right --widthtype pixel --width 72 --height 18 --tint 0x6c6d6e --transparent true --alpha 0 >/dev/null 2>&1 &
 dbus-launch --exit-with-session xmonad >/dev/null 2>&1

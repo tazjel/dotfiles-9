@@ -40,6 +40,7 @@ main = do
             , className =? "Chrome" --> doShift "3"
             , className =? "Deluge-gtk" --> doShift "3"
             , className =? "Deluge" --> doShift "3"
+            , className =? "P4v.bin" --> doShift "4"
             , className =? "Gthumb" --> doShift "4"
             , className =? "Easytag" --> doShift "4"
             , className =? "Gimp" --> doShift "5"
@@ -47,6 +48,7 @@ main = do
             , className =? "VirtualBox" --> doShift "6"
             , className =? "VBoxSDL" --> doShift "6"
             , className =? "qemu-system-i386" --> doCenterFloat
+            , className =? "SWT" --> doCenterFloat -- Code Collaborator
             ] <+> manageDocks <+> manageHook defaultConfig
         , layoutHook = smartBorders . avoidStruts
             $ onWorkspaces ["1", "2"] (vertical ||| horizontal ||| full)

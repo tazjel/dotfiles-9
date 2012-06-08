@@ -26,7 +26,7 @@ main = do
                withIM (1/6) ((ClassName "Gimp") `And` (Role "gimp-dock")) Full
 
     nScreens <- countScreens
-    xmobars <- mapM (\s -> spawnPipe ("xmobar -x " ++ show s ++ " ~/.xmonad/xmobarrc")) [0..nScreens-1]
+    xmobars <- mapM (\s -> spawnPipe ("xmobar -x " ++ show s ++ " ~/.xmonad/xmobarrc." ++ show s)) [0..nScreens-1]
     xmonad $ defaultConfig
         { modMask = defaultModMask
         , terminal = "urxvtc"
@@ -48,7 +48,7 @@ main = do
             , className =? "VirtualBox" --> doShift "6"
             , className =? "VBoxSDL" --> doShift "6"
             , className =? "qemu-system-i386" --> doCenterFloat
-            , className =? "SWT" --> doCenterFloat -- Code Collaborator
+            , className =? "SWT" --> doCenterFloat
             ] <+> manageDocks <+> manageHook defaultConfig
         , layoutHook = smartBorders . avoidStruts
             $ onWorkspaces ["1", "2"] (vertical ||| horizontal ||| full)

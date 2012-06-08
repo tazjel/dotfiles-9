@@ -9,5 +9,5 @@ Config
                  ]
     , sepChar = "%"
     , alignSep = "}{"
-    , template = " %StdinReader%}{<fc=#dcddde>%mail%</fc> :: %date% ::           "
+    , template = " %StdinReader%}{<fc=#dcddde>%mail%</fc> ::           :: %date% "
     }

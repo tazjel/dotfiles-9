@@ -2,6 +2,8 @@ syntax on
 colorscheme desert256
 filetype plugin indent on
 
+set fileencodings=utf8,cp1251
+
 set autoindent
 set background=dark
 set backspace=indent,eol,start

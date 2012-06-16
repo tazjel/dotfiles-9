@@ -43,6 +43,7 @@ main = do
             , className =? "P4v.bin" --> doShift "4"
             , className =? "Gthumb" --> doShift "4"
             , className =? "Easytag" --> doShift "4"
+            , className =? "Inkscape" --> doShift "4"
             , className =? "Gimp" --> doShift "5"
             , (className =? "Gimp" <&&> (role =? "gimp-toolbox" <||> role =? "gimp-dock" <||> role =? "gimp-image-window")) --> unfloat
             , className =? "VirtualBox" --> doShift "6"

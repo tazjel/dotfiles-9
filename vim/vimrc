@@ -45,6 +45,9 @@ map! <silent> <F11> <ESC>:set spell!<CR>i
 nmap <silent> <C-D> :NERDTreeToggle \| :silent NERDTreeMirror<CR>
 map! <silent> <C-D> <ESC>:NERDTreeToggle \| :silent NERDTreeMirror<CR>
 
+nmap <silent> <C-O> :!p4 edit "%"<CR>:set noro<CR>
+map! <silent> <C-O> <ESC>:!p4 edit "%"<CR>:set noro<CR>i
+
 au BufNewFile,BufRead *.xml,*.html,*.js,*.css,*.sass setlocal expandtab
 au BufNewFile,BufRead *.xml,*.html,*.js,*.css,*.sass setlocal tabstop=2
 au BufNewFile,BufRead *.xml,*.html,*.js,*.css,*.sass setlocal shiftwidth=2

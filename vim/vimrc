@@ -45,22 +45,24 @@ map! <silent> <F11> <ESC>:set spell!<CR>i
 nmap <silent> <C-D> :NERDTreeToggle \| :silent NERDTreeMirror<CR>
 map! <silent> <C-D> <ESC>:NERDTreeToggle \| :silent NERDTreeMirror<CR>
 
-nmap <silent> <C-O> :!p4 edit "%"<CR>:set noro<CR>
-map! <silent> <C-O> <ESC>:!p4 edit "%"<CR>:set noro<CR>i
+au FileType xml,xsl,html,js,css,sass setlocal expandtab
+au FileType xml,xsl,html,js,css,sass setlocal tabstop=2
+au FileType xml,xsl,html,js,css,sass setlocal shiftwidth=2
+au FileType xml,xsl,html,js,css,sass setlocal softtabstop=2
+au FileType xml,xsl,html,js,css,sass setlocal textwidth=500
 
-au BufNewFile,BufRead *.xml,*.html,*.js,*.css,*.sass setlocal expandtab
-au BufNewFile,BufRead *.xml,*.html,*.js,*.css,*.sass setlocal tabstop=2
-au BufNewFile,BufRead *.xml,*.html,*.js,*.css,*.sass setlocal shiftwidth=2
-au BufNewFile,BufRead *.xml,*.html,*.js,*.css,*.sass setlocal softtabstop=2
-au BufNewFile,BufRead *.xml,*.html,*.js,*.css,*.sass setlocal textwidth=500
+au FileType haskell,cabal,python,sql setlocal expandtab
+au FileType haskell,cabal,python,sql setlocal tabstop=4
+au FileType haskell,cabal,python,sql setlocal shiftwidth=4
+au FileType haskell,cabal,python,sql setlocal softtabstop=4
 
-au BufNewFile,BufRead *.hs,*.cabal,*.py,*.sql setlocal expandtab
-au BufNewFile,BufRead *.hs,*.cabal,*.py,*.sql setlocal tabstop=4
-au BufNewFile,BufRead *.hs,*.cabal,*.py,*.sql setlocal shiftwidth=4
-au BufNewFile,BufRead *.hs,*.cabal,*.py,*.sql setlocal softtabstop=4
+au FileType makefile setlocal noexpandtab
+au FileType makefile setlocal tabstop=8
+au FileType makefile setlocal shiftwidth=8
+au FileType makefile setlocal softtabstop=8
 
-au BufNewFile,BufRead /tmp/mutt* setlocal spell
-au BufNewFile,BufRead /tmp/mutt* source ~/.vim/scripts/mutt.vim
+au FileType mail setlocal spell
+au FileType mail source ~/.vim/scripts/mutt.vim
 
 au BufNewFile,BufRead COMMIT_EDITMSG setlocal filetype=conf
 au BufNewFile,BufRead COMMIT_EDITMSG setlocal spell

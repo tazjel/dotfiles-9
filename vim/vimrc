@@ -39,11 +39,23 @@ set t_vb=
 set textwidth=78
 set ttyfast
 
+let g:miniBufExplMapWindowNavVim=1 
+let g:miniBufExplMapWindowNavArrows=1 
+let g:miniBufExplMapCTabSwitchBufs=1 
+let g:miniBufExplModSelTarget=1 
+let g:miniBufExplMapCTabSwitchBufs=1
+let g:miniBufExplUseSingleClick=1
+let g:miniBufExplCloseOnSelect=1
+let g:miniBufExplorerMoreThanOne=1000
+
 map  <silent> <F11> :set spell!<CR>
 map! <silent> <F11> <ESC>:set spell!<CR>i
 
 nmap <silent> <C-D> :NERDTreeToggle \| :silent NERDTreeMirror<CR>
 map! <silent> <C-D> <ESC>:NERDTreeToggle \| :silent NERDTreeMirror<CR>
+
+nmap <silent> <C-B> :MiniBufExplorer<CR>
+map! <silent> <C-B> <ESC>:MiniBufExplorer<CR>
 
 au FileType xml,xsl,html,js,css,sass setlocal expandtab
 au FileType xml,xsl,html,js,css,sass setlocal tabstop=2

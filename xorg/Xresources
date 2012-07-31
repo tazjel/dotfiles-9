@@ -4,8 +4,8 @@ Xft.hinting:				true
 Xft.hintstyle:				hintfull
 Xft.rgba:				rgb
 
-URxvt*termName:				rxvt-unicode
-URxvt*saveLines:			512
+URxvt*termName:				xterm-256color
+URxvt*saveLines:			1024
 URxvt*scrollBar:			False
 URxvt*font:				-misc-fixed-medium-r-normal--14-130-75-75-c-70-*-*
 
@@ -56,7 +56,7 @@ XScreenSaver*Dialog.internalBorderWidth:8
 XScreenSaver*Dialog.borderWidth:	1
 XScreenSaver*Dialog.shadowThickness:	2
 
-XScreenSaver*passwd.heading.label:	Welcome to debian@lungu.avp.ru!
+XScreenSaver*passwd.heading.label:	Screen Lock
 XScreenSaver*passwd.body.label:		Please enter your password.
 XScreenSaver*passwd.unlock.label:	OK
 XScreenSaver*passwd.login.label:	New Login

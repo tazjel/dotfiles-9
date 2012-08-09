@@ -51,6 +51,9 @@ let g:miniBufExplorerMoreThanOne=1000
 let g:haddock_browser="/usr/bin/google-chrome"
 let g:haddock_indexfiledir="/home/sebl/.vim/"
 
+let g:haskell_indent_if=4
+let g:haskell_indent_case=4
+
 map  <silent> <F11> :set spell!<CR>
 map! <silent> <F11> <ESC>:set spell!<CR>i
 

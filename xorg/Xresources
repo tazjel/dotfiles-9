@@ -4,7 +4,7 @@ Xft.hinting:				true
 Xft.hintstyle:				hintfull
 Xft.rgba:				rgb
 
-URxvt*termName:				xterm-256color
+URxvt*termName:				rxvt-unicode-256color
 URxvt*saveLines:			1024
 URxvt*scrollBar:			False
 URxvt*font:				-misc-fixed-medium-r-normal--14-130-75-75-c-70-*-*

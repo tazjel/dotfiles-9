@@ -4,6 +4,8 @@ aptitude/cache
 mutt/local
 ncmpcpp/error.log
 vim/.netrwhist
+vim/autoload/*.so
+vim/haddock_index.vim
 vim/local.vim
 vim/spell/*.add
 vim/spell/*.add.spl

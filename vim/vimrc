@@ -48,6 +48,9 @@ let g:miniBufExplUseSingleClick=1
 let g:miniBufExplCloseOnSelect=1
 let g:miniBufExplorerMoreThanOne=1000
 
+let g:haddock_browser="/usr/bin/google-chrome"
+let g:haddock_indexfiledir="/home/sebl/.vim/"
+
 map  <silent> <F11> :set spell!<CR>
 map! <silent> <F11> <ESC>:set spell!<CR>i
 
@@ -78,5 +81,9 @@ au FileType mail source ~/.vim/scripts/mutt.vim
 
 au BufNewFile,BufRead COMMIT_EDITMSG setlocal filetype=conf
 au BufNewFile,BufRead COMMIT_EDITMSG setlocal spell
+
+au BufEnter *.hs compiler ghc
+au BufEnter *.hs set cmdheight=1
+au BufWritePost *.hs GhcModCheckAndLintAsync
 
 source ~/.vim/local.vim

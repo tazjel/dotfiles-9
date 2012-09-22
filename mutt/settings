@@ -28,6 +28,10 @@ set simple_search = "~f %s | ~C %s | ~s %s"
 set charset = utf8
 set send_charset = us-ascii:iso-8859-1:koi8-r:utf-8
 set alias_file = ~/.aliases
-set mailcap_path="~/.mailcap:~/.mutt/mailcap:/usr/share/mutt/mailcap:/etc/mailcap:/etc/mailcap:/usr/etc/mailcap:/usr/local/etc/mailcap"
+set mailcap_path ="~/.mailcap:~/.mutt/mailcap:/usr/share/mutt/mailcap:/etc/mailcap:/etc/mailcap:/usr/etc/mailcap:/usr/local/etc/mailcap"
 set implicit_autoview = yes
 set xterm_set_titles = yes
+
+set header_cache     = "~/.cache/mutt/head"
+set message_cachedir = "~/.cache/mutt/body"
+set certificate_file = "~/.cache/mutt/cert"

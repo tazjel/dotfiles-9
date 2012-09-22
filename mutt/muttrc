@@ -2,7 +2,6 @@ source ~/.mutt/settings
 source ~/.mutt/pgp
 source ~/.mutt/headers
 source ~/.mutt/bindings
-source ~/.mutt/maildir
 source ~/.mutt/formats
 source ~/.mutt/colors
 

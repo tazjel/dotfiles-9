@@ -74,6 +74,12 @@ au FileType haskell,cabal,python,sql setlocal tabstop=4
 au FileType haskell,cabal,python,sql setlocal shiftwidth=4
 au FileType haskell,cabal,python,sql setlocal softtabstop=4
 
+au FileType scheme setlocal nocindent
+au FileType scheme setlocal expandtab
+au FileType scheme setlocal tabstop=2
+au FileType scheme setlocal shiftwidth=2
+au FileType scheme setlocal softtabstop=2
+
 au FileType makefile setlocal noexpandtab
 au FileType makefile setlocal tabstop=8
 au FileType makefile setlocal shiftwidth=8

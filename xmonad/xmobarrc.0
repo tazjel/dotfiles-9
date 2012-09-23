@@ -4,10 +4,10 @@ Config
     , fgColor = "#acadae"
     , position = TopW L 100
     , commands = [ Run Date "%a %Y/%m/%d <fc=#dcddde>%H:%M</fc>" "date" 10
-                 , Run Com "~/.xmonad/imap-unseen" [] "mail" 100
+                 , Run CommandReader "python -u ~/.xmonad/imap-unseen" "imap"
                  , Run StdinReader
                  ]
     , sepChar = "%"
     , alignSep = "}{"
-    , template = " %StdinReader%}{<fc=#dcddde>%mail%</fc> ::           :: %date% "
+    , template = " %StdinReader%}{ <fc=#dcddde>%imap%</fc> ::           :: %date% "
     }

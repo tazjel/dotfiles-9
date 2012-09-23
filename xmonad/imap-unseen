@@ -2,23 +2,29 @@
 
 import os.path
 import imaplib
+import time
 import imp
 
-try:
-    config = imp.load_source('config', os.path.expanduser("~/.config/imap-unseen.conf"))
+while True:
+    try:
+        config = imp.load_source('config', os.path.expanduser("~/.config/imap-unseen.conf"))
 
-    server = imaplib.IMAP4_SSL(config.mailserver, config.port)
-    server.login(config.username, config.password)
-    server.select(config.mailbox)
+        server = imaplib.IMAP4_SSL(config.mailserver, config.port)
+        server.login(config.username, config.password)
+        server.select(config.mailbox)
 
-    data = str(server.status(config.mailbox, '(UNSEEN)'))
-    tokens = data.split()
-    count = int(tokens[3].replace(')\'])', ''))
-    if count > 0:
-        print ('M:%d') % count
+        data = str(server.status(config.mailbox, '(UNSEEN)'))
+        tokens = data.split()
+        count = int(tokens[3].replace(')\'])', ''))
+        if count > 0:
+            print ('M:%d') % count
+        else:
+            print ''
 
-    server.close()
-    server.logout()
+        server.close()
+        server.logout()
 
-except:
-    print 'FAIL'
+    except:
+        print 'FAIL'
+
+    time.sleep(10)

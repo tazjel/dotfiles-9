@@ -13,13 +13,21 @@ while True:
         server.login(config.username, config.password)
         server.select(config.mailbox)
 
-        data = str(server.status(config.mailbox, '(UNSEEN)'))
-        tokens = data.split()
-        count = int(tokens[3].replace(')\'])', ''))
-        if count > 0:
-            print ('M:%d') % count
-        else:
-            print ''
+        connected = True
+        while connected:
+            try:
+                data = str(server.status(config.mailbox, '(UNSEEN)'))
+                tokens = data.split()
+                count = int(tokens[3].partition(')')[0])
+                if count > 0:
+                    print ('M:%d') % count
+                else:
+                    print ''
+
+                time.sleep(10)
+
+            except:
+                connected = False
 
         server.close()
         server.logout()
@@ -27,4 +35,4 @@ while True:
     except:
         print 'FAIL'
 
-    time.sleep(10)
+    time.sleep(1)

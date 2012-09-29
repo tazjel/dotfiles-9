@@ -24,7 +24,7 @@ while True:
                 else:
                     print ''
 
-                time.sleep(10)
+                time.sleep(config.pollSleep)
 
             except:
                 connected = False
@@ -35,4 +35,4 @@ while True:
     except:
         print 'FAIL'
 
-    time.sleep(1)
+    time.sleep(config.failSleep)

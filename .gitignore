@@ -10,6 +10,7 @@ vim/local.vim
 vim/spell/*.add
 vim/spell/*.add.spl
 xmonad/xmonad-x86_64-linux
+xmonad/xmonad-i386-linux
 xmonad/xmonad.errors
 xmonad/xmonad.hi
 xmonad/xmonad.o

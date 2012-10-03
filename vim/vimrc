@@ -7,8 +7,6 @@ set fileencodings=utf8,cp1251
 set autoindent
 set background=dark
 set backspace=indent,eol,start
-set cindent
-set cinoptions=:0,l1,g0,p4,t0,i4,+4,c1,(0,W4
 set clipboard^=unnamed
 set formatoptions+=tqcro
 set hidden
@@ -29,6 +27,7 @@ set nowrap
 set pastetoggle=<f12>
 set ruler
 set scrolloff=3
+set shortmess=I
 set showcmd
 set showmode
 set smartcase
@@ -48,9 +47,6 @@ let g:miniBufExplUseSingleClick=1
 let g:miniBufExplCloseOnSelect=1
 let g:miniBufExplorerMoreThanOne=1000
 
-let g:haddock_browser="/usr/bin/google-chrome"
-let g:haddock_indexfiledir="/home/sebl/.vim/"
-
 let g:haskell_indent_if=4
 let g:haskell_indent_case=4
 
@@ -63,36 +59,23 @@ map! <silent> <C-D> <ESC>:NERDTreeToggle \| :silent NERDTreeMirror<CR>
 nmap <silent> <C-B> :MiniBufExplorer<CR>
 map! <silent> <C-B> <ESC>:MiniBufExplorer<CR>
 
-au FileType xml,xsl,html,js,css,sass setlocal expandtab
-au FileType xml,xsl,html,js,css,sass setlocal tabstop=2
-au FileType xml,xsl,html,js,css,sass setlocal shiftwidth=2
-au FileType xml,xsl,html,js,css,sass setlocal softtabstop=2
-au FileType xml,xsl,html,js,css,sass setlocal textwidth=500
+au FileType c,cpp setlocal cindent
+au FileType c,cpp setlocal cinoptions=:0,l1,g0,p4,t0,i4,+4,c1,(0,W4
 
-au FileType haskell,cabal,python,sql setlocal expandtab
-au FileType haskell,cabal,python,sql setlocal tabstop=4
-au FileType haskell,cabal,python,sql setlocal shiftwidth=4
-au FileType haskell,cabal,python,sql setlocal softtabstop=4
+au FileType haskell,cabal,python,sql,sh setlocal expandtab
+au FileType haskell,cabal,python,sql,sh setlocal tabstop=4
+au FileType haskell,cabal,python,sql,sh setlocal shiftwidth=4
+au FileType haskell,cabal,python,sql,sh setlocal softtabstop=4
 
-au FileType scheme setlocal nocindent
-au FileType scheme setlocal expandtab
-au FileType scheme setlocal tabstop=2
-au FileType scheme setlocal shiftwidth=2
-au FileType scheme setlocal softtabstop=2
-
-au FileType makefile setlocal noexpandtab
-au FileType makefile setlocal tabstop=8
-au FileType makefile setlocal shiftwidth=8
-au FileType makefile setlocal softtabstop=8
+au FileType xml,xsl,html,js,css,sass,scheme setlocal expandtab
+au FileType xml,xsl,html,js,css,sass,scheme setlocal tabstop=2
+au FileType xml,xsl,html,js,css,sass,scheme setlocal shiftwidth=2
+au FileType xml,xsl,html,js,css,sass,scheme setlocal softtabstop=2
+au FileType xml,xsl,html,js,css,sass,scheme setlocal textwidth=500
 
 au FileType mail setlocal spell
 au FileType mail source ~/.vim/scripts/mutt.vim
 
-au BufNewFile,BufRead COMMIT_EDITMSG setlocal filetype=conf
-au BufNewFile,BufRead COMMIT_EDITMSG setlocal spell
-
-au BufEnter *.hs compiler ghc
-au BufEnter *.hs set cmdheight=1
-au BufWritePost *.hs GhcModCheckAndLintAsync
+au FileType git setlocal spell
 
 source ~/.vim/local.vim

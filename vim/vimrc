@@ -73,6 +73,9 @@ au FileType xml,xsl,html,js,css,sass,scheme setlocal shiftwidth=2
 au FileType xml,xsl,html,js,css,sass,scheme setlocal softtabstop=2
 au FileType xml,xsl,html,js,css,sass,scheme setlocal textwidth=500
 
+au FileType scheme setlocal lisp
+au FileType scheme setlocal lispwords+=define-type,type-case
+
 au FileType mail setlocal spell
 au FileType mail source ~/.vim/scripts/mutt.vim
 

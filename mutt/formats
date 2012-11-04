@@ -1,2 +1,0 @@
-set index_format = " %Z %[%Y/%m/%d] %-25.25L %s"
-set folder_format = " %N %f %> %d %u:%g %F "

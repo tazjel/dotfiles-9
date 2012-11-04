@@ -1,7 +1,59 @@
-source ~/.mutt/settings
-source ~/.mutt/pgp
-source ~/.mutt/headers
-source ~/.mutt/formats
-source ~/.mutt/colors
+set pager_context = 1
+set pager_index_lines = 6
+set menu_scroll = yes
+set status_on_top = yes
+set sort = threads
+set fast_reply = yes
+set beep = no
+set markers = no
+set confirmappend = no
+set edit_headers = yes
+set mark_old = no
+set pager_stop = yes
+set reverse_alias = yes
+set tilde = yes
+set abort_nosubject = no
+set abort_unmodified = ask-yes
+set move = no
+set copy = yes
+set postpone = no
+set delete = yes
+set include = yes
+set recall = no
+set reply_to = yes
+set save_empty = no
+set help = no
+set history = 100
+set simple_search = "~f %s | ~C %s | ~s %s"
+set charset = utf8
+set send_charset = us-ascii:iso-8859-1:koi8-r:utf-8
+set alias_file = ~/.aliases
+set mailcap_path ="~/.mailcap:/usr/share/mutt/mailcap:/etc/mailcap:/etc/mailcap:/usr/etc/mailcap:/usr/local/etc/mailcap"
+set implicit_autoview = yes
+set xterm_set_titles = yes
 
-source ~/.mutt/local
+set index_format = " %Z %[%Y/%m/%d] %-25.25L %s"
+set folder_format = " %N %f %> %d %u:%g %F "
+
+set header_cache = "~/.cache/mutt/head"
+set message_cachedir = "~/.cache/mutt/body"
+set certificate_file = "~/.cache/mutt/cert"
+
+color status     black  blue
+color indicator  black  white
+color quoted     cyan   default
+color quoted1    blue   default
+color signature  red    default
+color hdrdefault yellow default
+color attachment green  default
+color message    white  default
+color body       red    default "((ftp|http|https)://|news:)[^ >)\"\t]+"
+color body       yellow default "[-a-z_0-9.+]+@[-a-z_0-9.]+"
+
+ignore *
+unignore Date To Cc From Reply-To X-Mailer User-Agent Organization Subject
+
+unhdr_order *
+hdr_order Date To Cc From Reply-To X-Mailer User-Agent Organization Subject
+
+source `if [ -s ~/.muttrc.local ]; then echo ~/.muttrc.local; else echo /dev/null; fi`

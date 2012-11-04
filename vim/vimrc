@@ -1,84 +1,114 @@
-syntax on
-colorscheme desert256
+filetype off
+set nocompatible
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+Bundle 'gmarik/vundle'
+Bundle 'scrooloose/nerdtree'
+Bundle 'mileszs/ack.vim'
+Bundle 'bronson/vim-trailing-whitespace'
+Bundle 'fholgado/minibufexpl.vim'
+Bundle 'eddsteel/vim-mail'
+Bundle 'lungu/desert256.vim'
+Bundle 'lungu/haskell.vim'
 filetype plugin indent on
 
-set fileencodings=utf8,cp1251
-
-set autoindent
+syntax on
+colorscheme desert256
 set background=dark
-set backspace=indent,eol,start
-set clipboard^=unnamed
-set formatoptions+=tqcro
-set hidden
-set ignorecase
-set incsearch
-set lazyredraw
-set modeline
-set mouse=a
-set nobackup
-set nocompatible
-set noerrorbells
-set noexpandtab
-set nohlsearch
-set noshowmatch
-set noerrorbells
-set visualbell
-set nowrap
-set pastetoggle=<f12>
-set ruler
-set scrolloff=3
+
 set shortmess=I
+set hidden
+
+"set number
+"set numberwidth=4
+set ruler
+set modeline
 set showcmd
 set showmode
-set smartcase
+
+set nobackup
+set directory=~/.vim/backup
+
+set autoindent
 set smartindent
-set smarttab
-set spelllang=en,ru
-set t_vb=
+set noexpandtab
+
+set formatprg=par\ -w78
+set formatoptions+=t
 set textwidth=78
+set nowrap
+
+set ignorecase
+set smartcase
+set incsearch
+set showmatch
+set hlsearch
+
+set backspace=indent,eol,start
+set clipboard^=unnamed
+
+set mouse=a
+set scrolloff=3
+set pastetoggle=<f12>
+
+set lazyredraw
 set ttyfast
 
-let g:miniBufExplMapWindowNavVim=1 
-let g:miniBufExplMapWindowNavArrows=1 
-let g:miniBufExplMapCTabSwitchBufs=1 
-let g:miniBufExplModSelTarget=1 
+set noerrorbells
+set visualbell
+set t_vb=
+
+set spelllang=en,ru
+nmap <silent> <F11> :set spell!<CR>
+map! <silent> <F11> <ESC>:set spell!<CR>i
+
+let g:miniBufExplMapWindowNavVim=1
+let g:miniBufExplMapWindowNavArrows=1
+let g:miniBufExplMapCTabSwitchBufs=1
+let g:miniBufExplModSelTarget=1
 let g:miniBufExplMapCTabSwitchBufs=1
 let g:miniBufExplUseSingleClick=1
 let g:miniBufExplCloseOnSelect=1
 let g:miniBufExplorerMoreThanOne=1000
-
-let g:haskell_indent_if=4
-let g:haskell_indent_case=4
-
-map  <silent> <F11> :set spell!<CR>
-map! <silent> <F11> <ESC>:set spell!<CR>i
+nmap <silent> <C-B> :MiniBufExplorer<CR>
+map! <silent> <C-B> <ESC>:MiniBufExplorer<CR>
 
 nmap <silent> <C-D> :NERDTreeToggle \| :silent NERDTreeMirror<CR>
 map! <silent> <C-D> <ESC>:NERDTreeToggle \| :silent NERDTreeMirror<CR>
 
-nmap <silent> <C-B> :MiniBufExplorer<CR>
-map! <silent> <C-B> <ESC>:MiniBufExplorer<CR>
+let g:haskell_indent_if=4
+let g:haskell_indent_case=4
 
-au FileType c,cpp setlocal cindent
-au FileType c,cpp setlocal cinoptions=:0,l1,g0,p4,t0,i4,+4,c1,(0,W4
+let g:mail_erase_quoted_sig=1
+let g:mail_delete_empty_quoted=1
+let g:mail_generate_abbrev=1
+let g:mail_cursor_start=1
 
-au FileType haskell,cabal,python,sql,sh setlocal expandtab
-au FileType haskell,cabal,python,sql,sh setlocal tabstop=4
-au FileType haskell,cabal,python,sql,sh setlocal shiftwidth=4
-au FileType haskell,cabal,python,sql,sh setlocal softtabstop=4
+au FileType c,cpp call CHook()
+function CHook()
+    setlocal cindent
+    setlocal cinoptions=:0,l1,g0,p4,t0,i4,+4,c1,(0,W4
+endfunction
 
-au FileType xml,xsl,html,js,css,sass,scheme setlocal expandtab
-au FileType xml,xsl,html,js,css,sass,scheme setlocal tabstop=2
-au FileType xml,xsl,html,js,css,sass,scheme setlocal shiftwidth=2
-au FileType xml,xsl,html,js,css,sass,scheme setlocal softtabstop=2
-au FileType xml,xsl,html,js,css,sass,scheme setlocal textwidth=500
+au FileType cabal call SetExpandTab(4)
+au FileType haskell call SetExpandTab(4)
 
-au FileType scheme setlocal lisp
-au FileType scheme setlocal lispwords+=define-type,type-case
+au FileType scheme call SchemeHook()
+function SchemeHook()
+    call SetExpandTab(2)
+    setlocal lisp
+    setlocal lispwords+=match,define-syntax,syntax-case,syntax-rules,define-type,type-case,define-core
+endfunction
 
-au FileType mail setlocal spell
-au FileType mail source ~/.vim/scripts/mutt.vim
+au FileType sh call SetExpandTab(4)
+au FileType vim call SetExpandTab(4)
+au FileType python call SetExpandTab(4)
 
-au FileType git setlocal spell
+function SetExpandTab(width)
+    setlocal expandtab
+    let &tabstop=a:width
+    let &shiftwidth=a:width
+    let &softtabstop=a:width
+endfunction
 
-source ~/.vim/local.vim
+source ~/.vimrc.local

@@ -22,7 +22,6 @@ ln -Ts "$basedir/misc/urlview" ~/.urlview
 ln -Ts "$basedir/mutt/muttrc" ~/.muttrc
 mkdir -p ~/.ncmpcpp
 ln -Ts "$basedir/ncmpcpp/config" ~/.ncmpcpp/config
-ln -Ts "$basedir/vim" ~/.vim
 ln -Ts "$basedir/vim/gvimrc" ~/.gvimrc
 ln -Ts "$basedir/vim/vimrc" ~/.vimrc
 mkdir -p ~/.xmonad

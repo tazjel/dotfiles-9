@@ -1,0 +1,86 @@
+#!/usr/bin/env python
+# -*- encoding: utf-8 -*-
+
+from sys import argv
+from os import linesep
+from imp import new_module
+from os.path import expanduser
+from argparse import ArgumentParser, Namespace
+from pyexiv2.metadata import ImageMetadata
+
+def load_defaults(filename):
+    defaults = Namespace()
+
+    m = new_module('defaults')
+    m.__file__ = filename
+
+    try:
+        execfile(filename, m.__dict__)
+    except:
+        pass
+
+    defaults.camera = m.__dict__.get('camera', None)
+    defaults.lens = m.__dict__.get('lens', None)
+    defaults.filter = m.__dict__.get('filter', None)
+    defaults.back = m.__dict__.get('back', None)
+    defaults.film = m.__dict__.get('film', None)
+    defaults.developer = m.__dict__.get('developer', None)
+    defaults.scanner = m.__dict__.get('scanner', None)
+    defaults.software = m.__dict__.get('software', None)
+    defaults.artist = m.__dict__.get('artist', None)
+    defaults.copyright = m.__dict__.get('copyright', None)
+    defaults.date = m.__dict__.get('date', None)
+
+    return defaults
+
+
+def build_comment(args):
+
+    def nonempty(*xs):
+        return [ x for x in xs if x ]
+
+    return '\n'.join(nonempty(
+        ' | '.join(nonempty(args.camera, args.lens, args.filter, args.back)),
+        ' | '.join(nonempty(args.film, args.developer)),
+        ' | '.join(nonempty(args.scanner, args.software)))) or None
+
+
+def set_tag(metadata, tag, value):
+    if not value is None:
+        metadata[tag] = value
+
+
+if __name__ == '__main__':
+    argparser = ArgumentParser()
+    argparser.add_argument('--camera')
+    argparser.add_argument('--lens')
+    argparser.add_argument('--filter')
+    argparser.add_argument('--back')
+    argparser.add_argument('--film')
+    argparser.add_argument('--developer')
+    argparser.add_argument('--scanner')
+    argparser.add_argument('--software')
+    argparser.add_argument('--artist')
+    argparser.add_argument('--copyright')
+    argparser.add_argument('--date')
+    argparser.add_argument('--nocomment', action='store_true')
+    argparser.add_argument('filenames', metavar='FILENAME', type=str, nargs='+')
+
+    defaults = load_defaults(expanduser('~/.filmtagrc'))
+    args = argparser.parse_args(argv[1:], defaults)
+
+    comment = None
+    if not args.nocomment:
+        comment = build_comment(args)
+
+    for i in args.filenames:
+        metadata = ImageMetadata(i)
+        metadata.read()
+
+        set_tag(metadata, 'Exif.Image.Model', args.camera)
+        set_tag(metadata, 'Exif.Image.Artist', args.artist)
+        set_tag(metadata, 'Exif.Image.Copyright', args.copyright)
+        set_tag(metadata, 'Exif.Image.DateTime', args.date)
+        set_tag(metadata, 'Exif.Photo.UserComment', comment)
+
+        metadata.write(preserve_timestamps=True)

@@ -4,7 +4,7 @@ Config
     , fgColor = "#acadae"
     , position = TopW L 100
     , commands = [ Run Date "%a %Y/%m/%d <fc=#dcddde>%H:%M</fc>" "date" 10
-                 , Run CommandReader "imap-unseen" "imap"
+                 , Run CommandReader "python -u ~/local/bin/imap-unseen" "imap"
                  , Run StdinReader
                  ]
     , sepChar = "%"

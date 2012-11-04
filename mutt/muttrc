@@ -56,4 +56,4 @@ unignore Date To Cc From Reply-To X-Mailer User-Agent Organization Subject
 unhdr_order *
 hdr_order Date To Cc From Reply-To X-Mailer User-Agent Organization Subject
 
-source `if [ -s ~/.muttrc.local ]; then echo ~/.muttrc.local; else echo /dev/null; fi`
+source `if [ -s $HOME/.muttrc.local ]; then echo $HOME/.muttrc.local; else echo /dev/null; fi`

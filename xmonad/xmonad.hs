@@ -20,17 +20,19 @@ import XMonad.Util.EZConfig
 import qualified XMonad.StackSet as W
 
 main :: IO ()
-main = xmonad $ ewmh $ defaultConfig
-    { modMask = mod1Mask
-    , terminal = "urxvtc"
-    , focusFollowsMouse = True
-    , normalBorderColor = "#6c6d6e"
-    , focusedBorderColor = "#dc6d6e"
-    , workspaces = ["1", "2", "3", "4", "5", "6"]
-    , layoutHook = myLayoutHook
-    , manageHook = myManageHook
-    , logHook = myLogHook =<< spawnPipe "xmobar ~/.xmobarrc"
-    } `additionalKeys` myKeys mod1Mask
+main = do
+    xmobar <- spawnPipe "xmobar ~/.xmobarrc"
+    xmonad $ ewmh $ defaultConfig
+        { modMask = mod1Mask
+        , terminal = "urxvtc"
+        , focusFollowsMouse = True
+        , normalBorderColor = "#6c6d6e"
+        , focusedBorderColor = "#dc6d6e"
+        , workspaces = ["1", "2", "3", "4", "5", "6"]
+        , layoutHook = myLayoutHook
+        , manageHook = myManageHook
+        , logHook = myLogHook xmobar
+        } `additionalKeys` myKeys mod1Mask
 
 myLayoutHook = smartBorders . avoidStruts
     $ onWorkspaces ["1", "2"] (vertical ||| horizontal ||| Full)

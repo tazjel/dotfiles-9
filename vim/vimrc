@@ -6,7 +6,6 @@ Bundle 'gmarik/vundle'
 Bundle 'scrooloose/nerdtree'
 Bundle 'mileszs/ack.vim'
 Bundle 'bronson/vim-trailing-whitespace'
-Bundle 'fholgado/minibufexpl.vim'
 Bundle 'eddsteel/vim-mail'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'lungu/haskell.vim'
@@ -61,17 +60,6 @@ set t_vb=
 set spelllang=en,ru
 nmap <silent> <F11> :set spell!<CR>
 map! <silent> <F11> <ESC>:set spell!<CR>i
-
-let g:miniBufExplMapWindowNavVim=1
-let g:miniBufExplMapWindowNavArrows=1
-let g:miniBufExplMapCTabSwitchBufs=1
-let g:miniBufExplModSelTarget=1
-let g:miniBufExplMapCTabSwitchBufs=1
-let g:miniBufExplUseSingleClick=1
-let g:miniBufExplCloseOnSelect=1
-let g:miniBufExplorerMoreThanOne=1000
-nmap <silent> <C-B> :MiniBufExplorer<CR>
-map! <silent> <C-B> <ESC>:MiniBufExplorer<CR>
 
 nmap <silent> <C-D> :NERDTreeToggle \| :silent NERDTreeMirror<CR>
 map! <silent> <C-D> <ESC>:NERDTreeToggle \| :silent NERDTreeMirror<CR>

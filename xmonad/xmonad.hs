@@ -48,7 +48,7 @@ myLayoutHook = smartBorders . avoidStruts
 
 myLogHook xmobar = dynamicLogWithPP xmobarPP
     { ppOutput = hPutStrLn xmobar
-    , ppCurrent = xmobarColor "#839496" ""
+    , ppCurrent = xmobarColor "#fdf6e3" ""
     , ppUrgent = xmobarColor "#fdf6e3" ""
     , ppTitle = xmobarColor "#839496" "" . shorten 200
     , ppSep = " :: "
@@ -94,5 +94,5 @@ myKeys modMask =
     [ ((modMask .|. shiftMask, xK_l), spawn "xscreensaver-command -lock")
     , ((0, xK_Print), spawn "scrot ~/storage/tmp/%Y%m%d-%H%M%S.png")
     , ((modMask, xK_Print), spawn "scrot -u ~/storage/tmp/%Y%m%d-%H%M%S.png")
-    , ((modMask, xK_p), spawn "exe=`dmenu_path | dmenu -nf '#839496' -nb '#002b36' -sf '#002b36' -sb '#839496' -fn -misc-fixed-medium-r-normal--14-130-75-75-c-70-*-*` && eval \"exec $exe\"")
+    , ((modMask, xK_p), spawn "exe=`dmenu_path | dmenu -nf '#839496' -nb '#001b26' -sf '#001b26' -sb '#839496' -fn -misc-fixed-medium-r-normal--14-130-75-75-c-70-*-*` && eval \"exec $exe\"")
     ]

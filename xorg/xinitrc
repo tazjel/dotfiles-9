@@ -7,13 +7,13 @@ xsetroot -cursor_name left_ptr
 
 xrdb ~/.Xresources
 
-feh --bg-center ~/.wallpaper
+#feh --bg-center ~/.wallpaper
 
 urxvtd -q -o >/dev/null 2>&1 &
 xset b off >/dev/null 2>&1 &
 
 [ -x /usr/bin/xscreensaver ] && xscreensaver >/dev/null 2>&1 &
-trayer --edge top --align right --widthtype pixel --width 72 --height 18 --margin 171 --tint 0x002b36 --transparent true --alpha 0 >/dev/null 2>&1 &
+trayer --edge top --align right --widthtype pixel --width 72 --height 18 --margin 171 --tint 0x001b26 --transparent true --alpha 0 >/dev/null 2>&1 &
 
 [ -f $HOME/.xinitrc.local ] && . $HOME/.xinitrc.local
 

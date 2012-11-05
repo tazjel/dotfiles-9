@@ -1,6 +1,6 @@
 Config
     { font = "-misc-fixed-medium-r-normal--14-130-75-75-c-70-*-*"
-    , bgColor = "#002b36"
+    , bgColor = "#001b26"
     , fgColor = "#839496"
     , position = TopW L 100
     , commands = [ Run Date "%a %Y/%m/%d <fc=#fdf6e3>%H:%M</fc>" "date" 10

@@ -1,67 +1,114 @@
-Xft.dpi:				96
-Xft.antialias:				true
-Xft.hinting:				true
-Xft.hintstyle:				hintfull
-Xft.rgba:				rgb
+#define F_N  -misc-fixed-medium-r-normal--14-130-75-75-c-70-*-*
+#define F_NB -misc-fixed-bold-r-normal--14-130-75-75-c-70-*-*
+#define F_S  -misc-fixed-medium-r-normal--10-100-75-75-c-60-*-*
 
-URxvt*termName:				rxvt-unicode-256color
-URxvt*saveLines:			1024
-URxvt*scrollBar:			False
-URxvt*font:				-misc-fixed-medium-r-normal--14-130-75-75-c-70-*-*
+!! Tango
+!!#define C_0  #3c3d3e
+!!#define C_1  #ffa0a0
+!!#define C_2  #98fb98
+!!#define C_3  #f0e68c
+!!#define C_4  #87ceeb
+!!#define C_5  #ffa0a0
+!!#define C_6  #87ceeb
+!!#define C_7  #ecedee
+!!#define C_8  #3c3d3e
+!!#define C_9  #ffa0a0
+!!#define C_10 #9acd32
+!!#define C_11 #f0e68c
+!!#define C_12 #87ceeb
+!!#define C_13 #ffa0a0
+!!#define C_14 #87ceeb
+!!#define C_15 #ecedee
+!!#define C_BG #3c3d3e
+!!#define C_FG #ecedee
+!!#define C_FD #3c3d3e
+!!#define C_CC #ecedee
 
-URxvt*cursorColor:			#ecedee
-URxvt*pointerColor:			#ecedee
-URxvt*background:			#3c3d3e
-URxvt*foreground:			#ecedee
-URxvt*color0:				#3c3d3e
-URxvt*color8:				#3c3d3e
-URxvt*color1:				#ffa0a0
-URxvt*color9:				#ffa0a0
-URxvt*color2:				#98fb98
-URxvt*color10:				#9acd32
-URxvt*color3:				#f0e68c
-URxvt*color11:				#f0e68c
-URxvt*color4:				#87ceeb
-URxvt*color12:				#87ceeb
-URxvt*color5:				#ffa0a0
-URxvt*color13:				#ffa0a0
-URxvt*color6:				#87ceeb
-URxvt*color14:				#87ceeb
-URxvt*color7:				#ecedee
-URxvt*color15:				#ecedee
+!! Solarized
+#define C_0  #073642
+#define C_1  #dc322f
+#define C_2  #859900
+#define C_3  #b58900
+#define C_4  #268bd2
+#define C_5  #d33682
+#define C_6  #2aa198
+#define C_7  #eee8d5
+#define C_8  #002b36
+#define C_9  #cb4b16
+#define C_10 #586e75
+#define C_11 #657b83
+#define C_12 #839496
+#define C_13 #6c71c4
+#define C_14 #93a1a1
+#define C_15 #fdf6e3
+#define C_BG #002b36
+#define C_FG #839496
+#define C_FD #002b36
+#define C_CC #93a1a1
 
-XScreenSaver*Dialog.headingFont:	-misc-fixed-bold-r-normal--14-130-75-75-c-70-*-*
-XScreenSaver*Dialog.bodyFont:		-misc-fixed-medium-r-normal--14-130-75-75-c-70-*-*
-XScreenSaver*Dialog.labelFont:		-misc-fixed-medium-r-normal--14-130-75-75-c-70-*-*
-XScreenSaver*Dialog.unameFont:		-misc-fixed-medium-r-normal--14-130-75-75-c-70-*-*
-XScreenSaver*Dialog.buttonFont:		-misc-fixed-medium-r-normal--14-130-75-75-c-70-*-*
-XScreenSaver*Dialog.dateFont:		-misc-fixed-medium-r-normal--10-100-75-75-c-60-*-*
-XScreenSaver*passwd.passwdFont:		-misc-fixed-medium-r-normal--14-130-75-75-c-70-*-*
+Xft.dpi:       96
+Xft.antialias: true
+Xft.hinting:   true
+Xft.hintstyle: hintfull
+Xft.rgba:      rgb
 
-XScreenSaver*Dialog.foreground:		#000000
-XScreenSaver*Dialog.background:		#ecedee
-XScreenSaver*Dialog.Button.foreground:	#000000
-XScreenSaver*Dialog.Button.background:	#ecedee
-XScreenSaver*Dialog.Button.pointBackground:#eaeaea
-xScreenSaver*Dialog.Button.clickBackground:#c3c3c3
-xScreenSaver*Dialog.text.foreground:	#000000
-XScreenSaver*Dialog.text.background:	#ffffff
-xScreenSaver*passwd.thermometer.foreground:#4464ac
-XScreenSaver*passwd.thermometer.background:#ffffff
-xScreenSaver*Dialog.topShadowColor:	#ffffff
-xScreenSaver*Dialog.bottomShadowColor:	#3c3d3e
-XScreenSaver*Dialog.logo.width:		210
-XScreenSaver*Dialog.logo.height:	210
-XScreenSaver*Dialog.internalBorderWidth:8
-XScreenSaver*Dialog.borderWidth:	1
-XScreenSaver*Dialog.shadowThickness:	2
+URxvt*termName:     rxvt-unicode-256color
+URxvt*saveLines:    1024
+URxvt*scrollBar:    False
+URxvt*font:         F_N
+URxvt*cursorColor:  C_CC
+URxvt*pointerColor: C_CC
+URxvt*foreground:   C_FG
+URxvt*background:   C_BG
+URxvt*fadeColor:    C_FD
+URxvt*fading:       40
+URxvt*color0:       C_0
+URxvt*color1:       C_1
+URxvt*color2:       C_2
+URxvt*color3:       C_3
+URxvt*color4:       C_4
+URxvt*color5:       C_5
+URxvt*color6:       C_6
+URxvt*color7:       C_7
+URxvt*color8:       C_8
+URxvt*color9:       C_9
+URxvt*color10:      C_10
+URxvt*color11:      C_11
+URxvt*color12:      C_12
+URxvt*color13:      C_13
+URxvt*color14:      C_14
+URxvt*color15:      C_15
 
-XScreenSaver*passwd.heading.label:	Screen Lock
-XScreenSaver*passwd.body.label:		Please enter your password.
-XScreenSaver*passwd.unlock.label:	OK
-XScreenSaver*passwd.login.label:	New Login
-XScreenSaver*passwd.user.label:		Username:
-XScreenSaver*passwd.passwd.label:	Password:
-XScreenSaver*passwd.thermometer.width:	8
-XScreenSaver*passwd.asterisks:		True
-XScreenSaver*passwd.uname:		False
+XScreenSaver*Dialog.headingFont:            F_NB
+XScreenSaver*Dialog.bodyFont:               F_N
+XScreenSaver*Dialog.labelFont:              F_N
+XScreenSaver*Dialog.unameFont:              F_N
+XScreenSaver*Dialog.buttonFont:             F_N
+XScreenSaver*Dialog.dateFont:               F_S
+XScreenSaver*passwd.passwdFont:             F_N
+XScreenSaver*Dialog.foreground:             #000000
+XScreenSaver*Dialog.background:             #ecedee
+XScreenSaver*Dialog.Button.foreground:      #000000
+XScreenSaver*Dialog.Button.background:      #ecedee
+XScreenSaver*Dialog.Button.pointBackground: #eaeaea
+xScreenSaver*Dialog.Button.clickBackground: #c3c3c3
+xScreenSaver*Dialog.text.foreground:        #000000
+XScreenSaver*Dialog.text.background:        #ffffff
+xScreenSaver*passwd.thermometer.foreground: #4464ac
+XScreenSaver*passwd.thermometer.background: #ffffff
+xScreenSaver*Dialog.topShadowColor:         #ffffff
+xScreenSaver*Dialog.bottomShadowColor:      #3c3d3e
+XScreenSaver*Dialog.logo.width:             210
+XScreenSaver*Dialog.logo.height:            210
+XScreenSaver*Dialog.internalBorderWidth:    8
+XScreenSaver*Dialog.borderWidth:            1
+XScreenSaver*Dialog.shadowThickness:        2
+XScreenSaver*passwd.heading.label:          Screen Lock
+XScreenSaver*passwd.body.label:             Please enter your password.
+XScreenSaver*passwd.unlock.label:           OK
+XScreenSaver*passwd.login.label:            New Login
+XScreenSaver*passwd.user.label:             Username:
+XScreenSaver*passwd.passwd.label:           Password:
+XScreenSaver*passwd.thermometer.width:      8
+XScreenSaver*passwd.asterisks:              True
+XScreenSaver*passwd.uname:                  False

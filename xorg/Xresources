@@ -2,28 +2,6 @@
 #define F_NB -misc-fixed-bold-r-normal--14-130-75-75-c-70-*-*
 #define F_S  -misc-fixed-medium-r-normal--10-100-75-75-c-60-*-*
 
-!! Tango
-!!#define C_0  #3c3d3e
-!!#define C_1  #ffa0a0
-!!#define C_2  #98fb98
-!!#define C_3  #f0e68c
-!!#define C_4  #87ceeb
-!!#define C_5  #ffa0a0
-!!#define C_6  #87ceeb
-!!#define C_7  #ecedee
-!!#define C_8  #3c3d3e
-!!#define C_9  #ffa0a0
-!!#define C_10 #9acd32
-!!#define C_11 #f0e68c
-!!#define C_12 #87ceeb
-!!#define C_13 #ffa0a0
-!!#define C_14 #87ceeb
-!!#define C_15 #ecedee
-!!#define C_BG #3c3d3e
-!!#define C_FG #ecedee
-!!#define C_CC #ecedee
-
-!! Solarized
 #define C_0  #073642
 #define C_1  #dc322f
 #define C_2  #859900

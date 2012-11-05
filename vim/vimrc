@@ -8,13 +8,13 @@ Bundle 'mileszs/ack.vim'
 Bundle 'bronson/vim-trailing-whitespace'
 Bundle 'fholgado/minibufexpl.vim'
 Bundle 'eddsteel/vim-mail'
-Bundle 'lungu/desert256.vim'
+Bundle 'altercation/vim-colors-solarized'
 Bundle 'lungu/haskell.vim'
 filetype plugin indent on
 
 syntax on
-colorscheme desert256
 set background=dark
+colorscheme solarized
 
 set shortmess=I
 set hidden

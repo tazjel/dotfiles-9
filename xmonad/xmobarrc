@@ -1,13 +1,13 @@
 Config
     { font = "-misc-fixed-medium-r-normal--14-130-75-75-c-70-*-*"
-    , bgColor = "#6c6d6e"
-    , fgColor = "#acadae"
+    , bgColor = "#002b36"
+    , fgColor = "#839496"
     , position = TopW L 100
-    , commands = [ Run Date "%a %Y/%m/%d <fc=#dcddde>%H:%M</fc>" "date" 10
+    , commands = [ Run Date "%a %Y/%m/%d <fc=#fdf6e3>%H:%M</fc>" "date" 10
                  , Run CommandReader "python -u ~/local/bin/imap-unseen" "imap"
                  , Run StdinReader
                  ]
     , sepChar = "%"
     , alignSep = "}{"
-    , template = " %StdinReader%}{ <fc=#dcddde>%imap%</fc> ::           :: %date% "
+    , template = " %StdinReader%}{ <fc=#fdf6e3>%imap%</fc> ::           :: %date% "
     }

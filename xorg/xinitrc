@@ -2,7 +2,7 @@
 
 xrandr -s 0
 
-xsetroot -solid '#4c4d4e'
+xsetroot -solid '#002b36'
 xsetroot -cursor_name left_ptr
 
 xrdb ~/.Xresources
@@ -13,7 +13,7 @@ urxvtd -q -o >/dev/null 2>&1 &
 xset b off >/dev/null 2>&1 &
 
 [ -x /usr/bin/xscreensaver ] && xscreensaver >/dev/null 2>&1 &
-trayer --edge top --align right --widthtype pixel --width 72 --height 18 --margin 171 --tint 0x6c6d6e --transparent true --alpha 0 >/dev/null 2>&1 &
+trayer --edge top --align right --widthtype pixel --width 72 --height 18 --margin 171 --tint 0x002b36 --transparent true --alpha 0 >/dev/null 2>&1 &
 
 [ -f $HOME/.xinitrc.local ] && . $HOME/.xinitrc.local
 

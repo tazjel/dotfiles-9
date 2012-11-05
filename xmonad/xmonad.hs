@@ -26,8 +26,8 @@ main = do
         { modMask = mod1Mask
         , terminal = "urxvtc"
         , focusFollowsMouse = True
-        , normalBorderColor = "#6c6d6e"
-        , focusedBorderColor = "#dc6d6e"
+        , normalBorderColor = "#839496"
+        , focusedBorderColor = "#dc322f"
         , workspaces = ["1", "2", "3", "4", "5", "6"]
         , layoutHook = myLayoutHook
         , manageHook = myManageHook
@@ -48,9 +48,9 @@ myLayoutHook = smartBorders . avoidStruts
 
 myLogHook xmobar = dynamicLogWithPP xmobarPP
     { ppOutput = hPutStrLn xmobar
-    , ppCurrent = xmobarColor "#dcddde" "" 
-    , ppUrgent = xmobarColor "#8c0d0e" ""
-    , ppTitle = xmobarColor "#dcddde" "" . shorten 200
+    , ppCurrent = xmobarColor "#839496" ""
+    , ppUrgent = xmobarColor "#fdf6e3" ""
+    , ppTitle = xmobarColor "#839496" "" . shorten 200
     , ppSep = " :: "
     , ppLayout = (\l -> case l of
         "Tall"                -> "V"
@@ -94,5 +94,5 @@ myKeys modMask =
     [ ((modMask .|. shiftMask, xK_l), spawn "xscreensaver-command -lock")
     , ((0, xK_Print), spawn "scrot ~/storage/tmp/%Y%m%d-%H%M%S.png")
     , ((modMask, xK_Print), spawn "scrot -u ~/storage/tmp/%Y%m%d-%H%M%S.png")
-    , ((modMask, xK_p), spawn "exe=`dmenu_path | dmenu -nf '#acadae' -nb '#6c6d6e' -sf '#6c6d6e' -sb '#acadae' -fn -misc-fixed-medium-r-normal--14-130-75-75-c-70-*-*` && eval \"exec $exe\"")
+    , ((modMask, xK_p), spawn "exe=`dmenu_path | dmenu -nf '#839496' -nb '#002b36' -sf '#002b36' -sb '#839496' -fn -misc-fixed-medium-r-normal--14-130-75-75-c-70-*-*` && eval \"exec $exe\"")
     ]

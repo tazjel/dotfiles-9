@@ -21,7 +21,6 @@
 !!#define C_15 #ecedee
 !!#define C_BG #3c3d3e
 !!#define C_FG #ecedee
-!!#define C_FD #3c3d3e
 !!#define C_CC #ecedee
 
 !! Solarized
@@ -43,7 +42,6 @@
 #define C_15 #fdf6e3
 #define C_BG #002b36
 #define C_FG #839496
-#define C_FD #002b36
 #define C_CC #93a1a1
 
 Xft.dpi:       96
@@ -60,8 +58,6 @@ URxvt*cursorColor:  C_CC
 URxvt*pointerColor: C_CC
 URxvt*foreground:   C_FG
 URxvt*background:   C_BG
-URxvt*fadeColor:    C_FD
-URxvt*fading:       40
 URxvt*color0:       C_0
 URxvt*color1:       C_1
 URxvt*color2:       C_2

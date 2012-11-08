@@ -18,8 +18,8 @@ colorscheme solarized
 set shortmess=I
 set hidden
 
-"set number
-"set numberwidth=4
+set number
+set numberwidth=4
 set ruler
 set modeline
 set showcmd
@@ -32,7 +32,7 @@ set autoindent
 set smartindent
 set noexpandtab
 
-set formatprg=par\ -w78
+"set formatprg=par\ -w78
 set formatoptions+=t
 set textwidth=78
 set nowrap

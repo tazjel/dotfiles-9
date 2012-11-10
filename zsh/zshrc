@@ -34,6 +34,14 @@ xterm*|rxvt*)
 esac
 
 #
+# Key bindings
+#
+
+bindkey -v
+bindkey "^[[7~" beginning-of-line
+bindkey "^[[8~" end-of-line
+
+#
 # Aliases
 #
 

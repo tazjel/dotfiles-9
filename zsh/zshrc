@@ -38,8 +38,11 @@ esac
 #
 
 bindkey -v
+bindkey "^[[3~" delete-char
 bindkey "^[[7~" beginning-of-line
 bindkey "^[[8~" end-of-line
+bindkey "^[[A"  up-line-or-history
+bindkey "^[[B"  down-line-or-history
 
 #
 # Aliases

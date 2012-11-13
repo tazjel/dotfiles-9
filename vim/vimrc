@@ -33,7 +33,7 @@ set smartindent
 set noexpandtab
 
 "set formatprg=par\ -w78
-set formatoptions+=t
+set formatoptions+=tcroq
 set textwidth=78
 set nowrap
 

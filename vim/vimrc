@@ -32,7 +32,6 @@ set autoindent
 set smartindent
 set noexpandtab
 
-"set formatprg=par\ -w78
 set formatoptions+=tcroq
 set textwidth=78
 set nowrap
@@ -41,7 +40,7 @@ set ignorecase
 set smartcase
 set incsearch
 set showmatch
-"set hlsearch
+set hlsearch
 
 set backspace=indent,eol,start
 set clipboard^=unnamed
@@ -92,11 +91,13 @@ au FileType sh call SetExpandTab(4)
 au FileType vim call SetExpandTab(4)
 au FileType python call SetExpandTab(4)
 
+au FileType text call SetExpandTab(2)
+
 function SetExpandTab(width)
     setlocal expandtab
-    let &tabstop=a:width
-    let &shiftwidth=a:width
-    let &softtabstop=a:width
+    let &l:tabstop=a:width
+    let &l:shiftwidth=a:width
+    let &l:softtabstop=a:width
 endfunction
 
 source ~/.vimrc.local

@@ -8,6 +8,8 @@ Bundle 'mileszs/ack.vim'
 Bundle 'bronson/vim-trailing-whitespace'
 Bundle 'eddsteel/vim-mail'
 Bundle 'altercation/vim-colors-solarized'
+Bundle 'Shougo/vimproc'
+Bundle 'eagletmt/ghcmod-vim'
 Bundle 'lungu/haskell.vim'
 filetype plugin indent on
 
@@ -62,6 +64,8 @@ map! <silent> <F11> <ESC>:set spell!<CR>i
 
 nmap <silent> <C-D> :NERDTreeToggle \| :silent NERDTreeMirror<CR>
 map! <silent> <C-D> <ESC>:NERDTreeToggle \| :silent NERDTreeMirror<CR>
+
+let g:NERDTreeIgnore=['\.o$', '\.hi$']
 
 let g:haskell_indent_if=4
 let g:haskell_indent_case=4

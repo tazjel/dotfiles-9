@@ -39,10 +39,19 @@ esac
 
 bindkey -v
 bindkey "^[[3~" delete-char
-bindkey "^[[7~" beginning-of-line
-bindkey "^[[8~" end-of-line
 bindkey "^[[A"  up-line-or-history
 bindkey "^[[B"  down-line-or-history
+
+case "$TERM" in
+screen*)
+    bindkey "^[[1~" beginning-of-line
+    bindkey "^[[4~" end-of-line
+    ;;
+xterm*|rxvt*)
+    bindkey "^[[7~" beginning-of-line
+    bindkey "^[[8~" end-of-line
+    ;;
+esac
 
 #
 # Aliases

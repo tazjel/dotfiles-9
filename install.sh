@@ -4,7 +4,7 @@ basedir=`readlink -f $0 | xargs dirname`
 
 mkdir -p ~/.aptitude
 ln -Ts "$basedir/aptitude/config" ~/.aptitude/config
-ln -Ts "$basedir/bash/bash" ~/.bashrc
+ln -Ts "$basedir/bash/bashrc" ~/.bashrc
 mkdir -p ~/local/bin
 ln -Ts "$basedir/bin/filmtag" ~/local/bin/filmtag
 ln -Ts "$basedir/bin/imap-unseen" ~/local/bin/imap-unseen

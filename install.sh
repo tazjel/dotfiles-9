@@ -4,6 +4,7 @@ basedir=`readlink -f $0 | xargs dirname`
 
 mkdir -p ~/.aptitude
 ln -Ts "$basedir/aptitude/config" ~/.aptitude/config
+ln -Ts "$basedir/bash/bash" ~/.bashrc
 mkdir -p ~/local/bin
 ln -Ts "$basedir/bin/filmtag" ~/local/bin/filmtag
 ln -Ts "$basedir/bin/imap-unseen" ~/local/bin/imap-unseen
@@ -31,4 +32,3 @@ ln -Ts "$basedir/xorg/Xresources" ~/.Xresources
 ln -Ts "$basedir/xorg/fonts.conf" ~/.fonts.conf
 ln -Ts "$basedir/xorg/wallpaper" ~/.wallpaper
 ln -Ts "$basedir/xorg/xinitrc" ~/.xinitrc
-ln -Ts "$basedir/zsh/zshrc" ~/.zshrc

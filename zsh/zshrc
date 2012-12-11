@@ -24,6 +24,7 @@ HISTSIZE=1024
 SAVEHIST=1024
 HISTFILE=~/.zsh_history
 
+export ZBEEP=
 export PS1='%n@%M%(!.#.$) '
 case "$TERM" in
 xterm*|rxvt*)

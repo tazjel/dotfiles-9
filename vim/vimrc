@@ -96,6 +96,7 @@ au FileType vim call SetExpandTab(4)
 au FileType python call SetExpandTab(4)
 
 au FileType text call SetExpandTab(2)
+au FileType tex call SetExpandTab(2)
 
 function SetExpandTab(width)
     setlocal expandtab

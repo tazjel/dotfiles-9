@@ -1,6 +1,6 @@
 [ -z "$PS1" ] && return
 
-export PATH=$HOME/local/bin:$HOME/.cabal/bin:/sbin:/usr/sbin:/usr/local/sbin:$PATH
+export PATH=$HOME/local/bin:$HOME/.cabal/bin:/usr/local/bin:/sbin:/usr/sbin:$PATH
 export LC_CTYPE=ru_RU.UTF-8
 export LC_COLLATE=ru_RU.UTF-8
 export LC_PAPER=ru_RU.UTF-8

@@ -3,7 +3,7 @@
   <item>
     <name>Custom</name>
     <item>
-      <name>Shift_L+Shift_R to Cmd+Space</name>
+      <name>Shift_L+Shift_R to Command_L+Space</name>
       <identifier>remap.shiftLshiftR2commandLSpace</identifier>
       <autogen>--KeyToKey-- KeyCode::SHIFT_L, ModifierFlag::SHIFT_R, KeyCode::SPACE, ModifierFlag::COMMAND_L</autogen>
       <autogen>--KeyToKey-- KeyCode::SHIFT_R, ModifierFlag::SHIFT_L, KeyCode::SPACE, ModifierFlag::COMMAND_L</autogen>

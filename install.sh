@@ -19,7 +19,10 @@ ln -Ts "$basedir/misc/inputrc" ~/.inputrc
 ln -Ts "$basedir/misc/mailcap" ~/.mailcap
 ln -Ts "$basedir/misc/signature" ~/.signature
 ln -Ts "$basedir/misc/urlview" ~/.urlview
-ln -Ts "$basedir/mutt/muttrc" ~/.muttrc
+mkdir -p ~/.mutt
+mkdir -p ~/.mutt/cache/certs
+mkdir -p ~/.mutt/cache/headers
+ln -Ts "$basedir/mutt/muttrc" ~/.mutt/muttrc
 mkdir -p ~/.ncmpcpp
 ln -Ts "$basedir/ncmpcpp/config" ~/.ncmpcpp/config
 ln -Ts "$basedir/tmux/tmux.conf" ~/.tmux.conf

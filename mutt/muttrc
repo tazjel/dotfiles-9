@@ -30,13 +30,18 @@ set send_charset = us-ascii:iso-8859-1:koi8-r:utf-8
 set alias_file = ~/.aliases
 set mailcap_path ="~/.mailcap:/usr/share/mutt/mailcap:/etc/mailcap:/etc/mailcap:/usr/etc/mailcap:/usr/local/etc/mailcap"
 set implicit_autoview = yes
+set mail_check=60
+set timeout=5
+set imap_keepalive=300
+set imap_check_subscribed=yes
+set imap_idle=yes
 
 set index_format = " %Z %[%Y/%m/%d] %-25.25L %s"
 set folder_format = " %N %f %> %d %u:%g %F "
 
-set header_cache = "~/.cache/mutt/head"
-set message_cachedir = "~/.cache/mutt/body"
-set certificate_file = "~/.cache/mutt/cert"
+set header_cache=~/.mutt/cache/headers
+set message_cachedir=~/.mutt/cache/bodies
+set certificate_file=~/.mutt/certs
 
 ignore *
 unignore Date To Cc From Reply-To X-Mailer User-Agent Organization Subject

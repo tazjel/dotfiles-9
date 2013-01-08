@@ -30,7 +30,6 @@ set send_charset = us-ascii:iso-8859-1:koi8-r:utf-8
 set alias_file = ~/.aliases
 set mailcap_path ="~/.mailcap:/usr/share/mutt/mailcap:/etc/mailcap:/etc/mailcap:/usr/etc/mailcap:/usr/local/etc/mailcap"
 set implicit_autoview = yes
-set xterm_set_titles = yes
 
 set index_format = " %Z %[%Y/%m/%d] %-25.25L %s"
 set folder_format = " %N %f %> %d %u:%g %F "

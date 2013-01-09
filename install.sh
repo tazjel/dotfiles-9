@@ -19,9 +19,7 @@ ln -Ts "$basedir/misc/inputrc" ~/.inputrc
 ln -Ts "$basedir/misc/mailcap" ~/.mailcap
 ln -Ts "$basedir/misc/signature" ~/.signature
 ln -Ts "$basedir/misc/urlview" ~/.urlview
-mkdir -p ~/.mutt
-mkdir -p ~/.mutt/cache/certs
-mkdir -p ~/.mutt/cache/headers
+mkdir -p ~/.mutt/cache
 ln -Ts "$basedir/mutt/muttrc" ~/.mutt/muttrc
 mkdir -p ~/.ncmpcpp
 ln -Ts "$basedir/ncmpcpp/config" ~/.ncmpcpp/config

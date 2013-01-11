@@ -18,5 +18,3 @@
 	aliasfiletype = mutt
 [format]
 	signoff = true
-[push]
-	default = simple
